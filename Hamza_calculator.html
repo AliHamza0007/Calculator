@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE_Calculator</title>
+    <link rel="stylesheet" href="Hamza_calculator.css">
+</head>
+
+<body>
+    <div class="calculator">
+
+        
+        <input   id="screen"  />
+<div class="keypad">
+            <button class="btn"  id="AC"   >AC</button>
+            <button class="btn operator"   data-num="/" >/</button>
+            <button class="btn operator" data-num="*" >*</button>
+            <button class="btn"  id="clear" >C</button>
+            <button class="btn"  data-num="9" >9</button>
+            <button class="btn" data-num="8" >8</button>
+            <button class="btn"  data-num="7" >7</button>
+            <button class="btn operator"   data-num="-" >-</button>
+            <button class="btn" data-num="6" >6</button>
+            <button class="btn"  data-num="5" >5</button>
+            <button class="btn"  data-num="4" >4</button>
+            <button class="btn operator"   data-num="+" >+</button>
+            <button class="btn"  data-num="3" >3</button>
+            <button class="btn"  data-num="2" >2</button>
+            <button class="btn"  data-num="1" >1</button>
+            <button><a class="link" href="./Age_Calculator.html">AGE</a></button>
+            <button class="btn"  data-num="00" >00</button>
+            <button class="btn"  data-num="0" >0</button>
+            <button class="btn"  data-num="." >.</button>
+            <button class="btn "  id="equal"  >=</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    var screen = document.getElementById("screen");
+    var equal = document.getElementById("equal");
+    var allclear = document.getElementById("AC");
+    var clear = document.getElementById("clear");
+    var btn = document.querySelectorAll(".btn");
+
+    btn.forEach((button) => {
+        button.onclick = function (e) {
+            let value = e.target.dataset.num;
+            screen.value += value;
+        }
+    })
+
+    equal.onclick = () => {
+        if (screen.value === "") {
+            screen.value = "";
+
+        } else {
+            let answer = eval(screen.value)
+            screen.value = answer;
+        }
+    }
+    allclear.onclick = function () {
+        screen.value = '';
+    }
+    clear.onclick = () => {
+        screen.value = screen.value.substr(0, screen.value.length - 1);
+    }
+</script>
+
+</html>

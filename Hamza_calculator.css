@@ -1,0 +1,69 @@
+:root,
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.calculator {
+  background: #000;
+  width: 350px;
+  height: 560px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#screen {
+  color: #ffffff;
+  background: hsl(0, 6%, 10%);
+  text-align: end;
+  padding: 100px 20px 10px 0px;
+  border-bottom: 2px solid red;
+  border-radius: 20px;
+}
+
+.keypad {
+  background: #0e01010a;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button {
+  margin: 10px;
+  padding: 15px;
+  background: #383737;
+  border-radius: 10px;
+  color: rgb(7, 221, 71);
+}
+
+button:hover {
+  margin: 10px;
+  background: #4c4444;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgb(238, 237, 230);
+}
+
+#AC,
+#clear,
+.operator {
+  color: rgb(138, 138, 241);
+}
+.link {
+  color: #ffffff;
+}
+.w {
+  width: 300px;
+}
+
+@media (max-width: 420px) {
+  body {
+    background: #000;
+  }
+}
